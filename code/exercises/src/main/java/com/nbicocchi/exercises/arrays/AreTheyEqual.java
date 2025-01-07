@@ -1,5 +1,8 @@
 package com.nbicocchi.exercises.arrays;
 
+/**
+ * A simple exercise verifying if two arrays are equal
+ */
 public class AreTheyEqual {
     public static boolean areTheyEqual(int[] a, int[] b) {
         for (int i = 0; i < a.length; i++) {
