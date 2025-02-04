@@ -45,11 +45,6 @@ public class Vector2D {
         return Math.sqrt(x * x + y * y);
     }
 
-    public Vector2D normalize() {
-        double mag = magnitude();
-        return mag == 0 ? new Vector2D(0, 0) : new Vector2D(x / mag, y / mag);
-    }
-
     @Override
     public String toString() {
         return String.format("Vector2D(%.2f, %.2f)", x, y);
