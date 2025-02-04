@@ -1,10 +1,5 @@
-package com.nbicocchi.exercises.classes;
+package com.nbicocchi.exercises.inheritance;
 
-// il conto ha:
-// iban, intestatario, saldo, tasso di interesse
-// offre le seguenti funzionalità:
-// inserire/prelevare denaro
-// fare bonifici verso altri conti
 public class BankAccount {
     String IBAN;
     String owner;
@@ -73,5 +68,12 @@ public class BankAccount {
                 ", balance=" + balance +
                 ", interestRate=" + interestRate +
                 '}';
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("IT123", "ABC");
+        account.deposit(10);
+        account.withdraw(20);
+
     }
 }
