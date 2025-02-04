@@ -10,8 +10,8 @@ public class LocalBankAccount extends BankAccount {
     }
 
     public double wire(double amount, BankAccount otherAccount) {
-        if (!IBAN.substring(0, 3).equals(otherAccount.getIBAN().substring(0, 2))) {
-            throw new IllegalArgumentException("IBAN is not country local");
+        if (!IBAN.substring(0, 2).equals(otherAccount.getIBAN().substring(0, 2))) {
+            throw new IllegalArgumentException("IBAN not local");
         }
         withdraw(amount);
         otherAccount.deposit(amount);
@@ -19,11 +19,11 @@ public class LocalBankAccount extends BankAccount {
     }
 
     public static void main(String[] args) {
-        BankAccount a1 = new BankAccount("IT123", "ABC");
-        BankAccount a2 = new LocalBankAccount("US123", "BCE");
-        a1.wire(1000, a2);
-        System.out.println(a1);
-        System.out.println(a2);
-        a2.wire(1000, a1);
+        BankAccount ba1 = new BankAccount("IT123", "Owner 1");
+        BankAccount ba2 = new LocalBankAccount("US123", "Owner 2");
+        ba1.wire(1000, ba2);
+        ba2.wire(1000, ba1);
+        System.out.println(ba1);
+        System.out.println(ba2);
     }
 }
