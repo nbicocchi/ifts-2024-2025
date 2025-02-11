@@ -2,11 +2,11 @@ package com.nbicocchi.exercises.inheritance.shape;
 
 import java.awt.*;
 
-public class Circle extends Shape{
+public class Circle extends AbstractShape {
     double radius;
 
-    public Circle(Color color, double x, double y, double radius) {
-        super(color, x, y);
+    public Circle(double x, double y, Color color, double radius) {
+        super(x, y, color);
         this.radius = radius;
     }
 

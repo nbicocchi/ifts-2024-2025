@@ -2,16 +2,16 @@ package com.nbicocchi.exercises.inheritance.shape;
 
 import java.awt.*;
 
-public class Rectangle extends Shape{
-    double l1, l2;
+public class Rectangle extends AbstractShape {
+    double e1, e2;
 
-    public Rectangle(Color color, double x, double y, double l1, double l2) {
-        super(color, x, y);
-        this.l1 = l1;
-        this.l2 = l2;
+    public Rectangle(double x, double y, Color color, double e1, double e2) {
+        super(x, y, color);
+        this.e1 = e1;
+        this.e2 = e2;
     }
 
     public double getPerimeter() {
-        return 2 * (l1 + l2);
+        return 2 * (e1 + e2);
     }
 }

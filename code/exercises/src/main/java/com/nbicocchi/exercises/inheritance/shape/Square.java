@@ -2,15 +2,16 @@ package com.nbicocchi.exercises.inheritance.shape;
 
 import java.awt.*;
 
-public class Square extends Shape{
+public class Square extends AbstractShape {
     double edge;
 
-    public Square(Color color, double x, double y, double edge) {
-        super(color, x, y);
+    public Square(double x, double y, Color color, double edge) {
+        super(x, y, color);
         this.edge = edge;
     }
 
+    @Override
     public double getPerimeter() {
-        return 4 * edge;
+        return edge * 4;
     }
 }
