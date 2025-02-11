@@ -1,34 +1,17 @@
 package com.nbicocchi.exercises.inheritance.payment;
 
-/**
- * ### **Exercise: Implementing an Interface for a Payment System**
- *
- * Create a Java program that defines an interface and implements it in multiple payment classes.
- *
- * #### **Steps:**
- *
- * 1. **Create an interface named `Payment`** with the following methods:
- *    - `void processPayment(double amount);`
- *
- * 2. **Create two classes, `CreditCardPayment` and `PayPalPayment`, that implement the `Payment` interface.**
- *    - `CreditCardPayment` should have an instance variable `cardNumber`.
- *    - `PayPalPayment` should have an instance variable `email`.
- *
- * 3. **Implement the `processPayment(double amount)` method in both classes.**
- *    - `CreditCardPayment` should print:
- *      ```
- *      Processing credit card payment of $amount from card: [cardNumber]
- *      ```
- *    - `PayPalPayment` should print:
- *      ```
- *      Processing PayPal payment of $amount from email: [email]
- *      ```
- *
- * 4. **In the `main` method:**
- *    - Create instances of `CreditCardPayment` and `PayPalPayment`.
- *    - Call `processPayment()` on both objects with some example amounts.
- *
- * Would you like me to provide a sample implementation? 🚀
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
+    public static void main(String[] args) {
+        List<Payment> payments = new ArrayList<>(List.of(
+                new CreditCardPayment("0000-1111-2222-3333"),
+                new PayPalPayment("nbicocchi@gmail.com")
+        ));
+
+        for (Payment payment : payments) {
+            payment.processPayment(100);
+        }
+    }
 }
