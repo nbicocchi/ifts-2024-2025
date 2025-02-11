@@ -2,7 +2,7 @@ package com.nbicocchi.exercises.classes;
 
 import java.time.LocalDate;
 
-public class Person {
+public class Person implements Comparable<Person> {
     String name;
     String lastname;
     LocalDate birthday;
@@ -50,6 +50,11 @@ public class Person {
                 '}';
     }
 
+    @Override
+    public int compareTo(Person other) {
+        return this.getLastname().compareTo(other.getLastname());
+    }
+
     public static void main(String[] args) {
         Person p1 = new Person(
                 "John",
@@ -63,4 +68,6 @@ public class Person {
         System.out.println(p1.name + " " + p1.lastname);
         System.out.println(p2.getFullName());
     }
+
+
 }

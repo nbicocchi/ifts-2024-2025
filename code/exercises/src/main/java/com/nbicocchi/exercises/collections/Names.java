@@ -14,22 +14,8 @@ public class Names {
         people.add(new Person("Ciccio", "Pasticcio", LocalDate.of(2000,1,1)));
         people.add(new Person("Gino", "Pilotino", LocalDate.of(2002,2,2)));
         people.add(new Person("Ada", "Zanzibar", LocalDate.of(1999,11,11)));
-        people.sort(new Comparator<Person>() {
-                        @Override
-                        public int compare(Person p1, Person p2) {
-                            return -(p1.getBirthday().compareTo(p2.getBirthday()));
-                        }
-                    });
+        Collections.sort(people);
         System.out.println(people);
-
-
-
-
-
-
-
-
-
 
     }
 
