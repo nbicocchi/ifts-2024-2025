@@ -78,4 +78,12 @@ package com.nbicocchi.exercises.inheritance.vehicle;
  * Would you like a sample solution for reference? 🚗⚡
  */
 public class App {
+    public static void main(String[] args) {
+        Car c1 = new Car("fiat", "uno turbo", 1984, 0, 10);
+        ECar c2 = new ECar("tesla", "gt", 2020, 0, 10);
+        System.out.println(c1);
+        System.out.println(c2);
+    }
+
+
 }
