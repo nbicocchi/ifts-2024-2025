@@ -1,4 +1,4 @@
-package com.nbicocchi.exercises.inheritance;
+package com.nbicocchi.exercises.inheritance.vehicle;
 
 /**
  * ### **Exercise: Defining a Java Class with Multiple Interfaces and an Abstract Class**
@@ -77,5 +77,5 @@ package com.nbicocchi.exercises.inheritance;
  *
  * Would you like a sample solution for reference? 🚗⚡
  */
-public class Vehicle {
+public class App {
 }
